@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    background-image: linear-gradient(316deg, #6247aa 0%, #a594f9 74%);
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    min-height: 50px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+li:hover {
+    background-color: #e4b5cb;
+    background-image: linear-gradient(315deg, #e4b5cb 0%, #6b24dc 74%);
+    transform: scale(1.02);
+}
+
+li {
+    list-style: none;
+    padding: 20px 30px;
+    border: 2px solid black;
+    border-radius: 15px;
+    transition: all 0.1s;
+}
+
+nav > ul {
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.pochette_container {
+    position: relative;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+}
+
+.pochette {
+    width: 600px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.recto {
+    backface-visibility: hidden;
+}
+
+.verso {
+    position: absolute;
+    top: 0;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.card-flip {
+    transform: rotateY(180deg);
+}
+
+.pochette:hover {
+    transform: rotate(2deg);
+}
+
+.hero_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 100px;
+}
+
+.description {
+    max-width: 800px;
+    text-align: center;
+    line-height: 30px;
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+
+.music-flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 150px;
+    margin: 50px;
+}
+
+.slideshow {
+    position: relative;
+    max-width: 1600px; /* or any preferred width */
+    margin: auto;
+}
+
+.slideshow img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+    height: 1000px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; 
+}
+
+.slideshow_arrow_back,
+.slideshow_arrow_forward {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px !important; /* Adjust size as needed */
+    height: 100px !important; /* Adjust size as needed */
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Ensure arrows appear above the image */
+}
+
+.slideshow_arrow_back {
+    left: 10px; /* Adjust positioning as needed */
+}
+
+.slideshow_arrow_forward {
+    right: 10px; /* Adjust positioning as needed */
+}
+
+.linkcontainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    gap: 70px;
+    font-size: 1.2em;
+}
+
+.linkcontainer a {
+    padding: 30px;
+    border: 3px solid;
+    border-radius: 20px;
+}
+
+.linkcontainer a:hover {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+iframe {
+    margin-top: 40px;
+}
+
+p {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 30px;
+}
+
+section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.socialcontainer {
+    display: flex;
+    margin: 20px;
+    gap: 50px;
+}
+
+.socialcontainer a {
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.socialcontainer a:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.button {
+  background-color: #e4b5cb;
+  background-image: linear-gradient(315deg, #e4b5cb 0%, #6b24dc 74%);
+  transform: scale(1.02);
+  cursor: pointer;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+  border: 2px solid black;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.25);
+    height: 100px;
+    padding: 50px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 0 2.6rem;
+  }
+}
