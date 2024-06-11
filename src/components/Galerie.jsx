@@ -34,22 +34,24 @@ export function Galerie() {
 
     return (
         <>
-            <h2 id="galerie">Galerie</h2>
-            <div className="slideshow">
-                <img src={images[imageIndex]} alt={`Slide ${imageIndex + 1}`} />
-                <img
-                    className="slideshow_arrow_back"
-                    src={arrow_back}
-                    alt="Show previous"
-                    onClick={previousImage}
-                />
-                <img
-                    className="slideshow_arrow_forward"
-                    src={arrow_forward}
-                    alt="Show next"
-                    onClick={nextImage}
-                />
-            </div>
+            <section>
+                <h2>Galerie photo</h2>
+                <div className="slideshow" id="galerie">
+                    <img src={images[imageIndex]} alt={`Slide ${imageIndex + 1}`} />
+                    <img
+                        className="slideshow_arrow_back"
+                        src={arrow_back}
+                        alt="Show previous"
+                        onClick={previousImage}
+                    />
+                    <img
+                        className="slideshow_arrow_forward"
+                        src={arrow_forward}
+                        alt="Show next"
+                        onClick={nextImage}
+                    />
+                </div>
+            </section>
         </>
     );
 }

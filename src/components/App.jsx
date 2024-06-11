@@ -5,6 +5,7 @@ import { Musique } from "./Musique"
 import { Galerie } from "./Galerie"
 import { Contact } from "./Contact"
 import { Footer } from "./Footer"
+import ScrollToTop from './ScrollToTop';
 import "../styles/App.css"
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <Galerie/>
     <Contact/>
     <Footer/>
+    <ScrollToTop />
       </>)
 }
 

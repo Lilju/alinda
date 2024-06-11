@@ -6,11 +6,11 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 1rem;
 }
 
 body {
     font-family: 'Verdana', sans-serif;
+    color: #ffffff;
     background-image: linear-gradient(316deg, #6247aa 0%, #a594f9 74%);
     text-align: center;
 }
@@ -24,22 +24,35 @@ header {
 }
 
 a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
+    text-shadow: 3px 2px 2px #474747;
 }
 
-li:hover {
+h1, h2, .description, #contact, footer {
+    text-shadow: 2px 2px 2px #474747;  
+}
+
+li a:hover {
     background-color: #e4b5cb;
     background-image: linear-gradient(315deg, #e4b5cb 0%, #6b24dc 74%);
     transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 li {
-    list-style: none;
-    padding: 20px 30px;
-    border: 2px solid black;
+    list-style: none;    
+}
+
+li a {
+    display: block;
+    background-color: #7e5cd9;
+    border: 2px solid #3b2676;
     border-radius: 15px;
     transition: all 0.1s;
+    padding: 20px 30px;
+    width: 150px;
+    height: 65px;
 }
 
 nav > ul {
@@ -109,8 +122,10 @@ h2 {
 
 .slideshow {
     position: relative;
-    max-width: 1600px; /* or any preferred width */
+    width: 1500px;
     margin: auto;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; 
 }
 
 .slideshow img {
@@ -119,7 +134,6 @@ h2 {
     border-radius: 20px;
     object-fit: cover;
     height: 1000px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; 
 }
 
 .slideshow_arrow_back,
@@ -127,50 +141,59 @@ h2 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 100px !important; /* Adjust size as needed */
-    height: 100px !important; /* Adjust size as needed */
+    width: 100px !important;
+    height: 100px !important;
     cursor: pointer;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10; /* Ensure arrows appear above the image */
+    z-index: 10;
 }
 
 .slideshow_arrow_back {
-    left: 10px; /* Adjust positioning as needed */
+    left: 20px;
 }
 
 .slideshow_arrow_forward {
-    right: 10px; /* Adjust positioning as needed */
+    right: 20px;
 }
 
 .linkcontainer {
     display: flex;
     justify-content: space-around;
     margin: 20px;
-    gap: 70px;
+    gap: 100px;
     font-size: 1.2em;
 }
 
 .linkcontainer a {
     padding: 30px;
-    border: 3px solid;
+    border: 3px solid #3b2676;
+    background-color: #7e5cd9;
     border-radius: 20px;
+    transition: 0.2s;
 }
 
 .linkcontainer a:hover {
-    border-radius: 20px;
+    background-image: linear-gradient(315deg, #e4b5cb 0%, #6b24dc 74%);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 iframe {
     margin-top: 40px;
+    border: 3px solid #5234a4;
+    border-radius: 10px;
+}
+
+iframe:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 p {
     max-width: 800px;
     text-align: center;
+    font-size: 1.2em;
     margin: 0 auto;
     line-height: 30px;
 }
@@ -179,19 +202,18 @@ section {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 .socialcontainer {
     display: flex;
-    margin: 20px;
-    gap: 50px;
+    margin: 50px;
+    gap: 150px;
 }
 
 .socialcontainer a {
     padding: 30px;
-    border: 2px solid black;
+    border: 2px solid #3b2676;
     border-radius: 20px;
 }
 
@@ -204,9 +226,10 @@ section {
   background-image: linear-gradient(315deg, #e4b5cb 0%, #6b24dc 74%);
   transform: scale(1.02);
   cursor: pointer;
+  width: 150px;
   padding: 0 1.6rem;
   text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  text-shadow: rgba(0, 0, 0, 0.65) 0 3px 8px;
   transition: all .1s;
   user-select: none;
   -webkit-user-select: none;
@@ -220,10 +243,39 @@ section {
 }
 
 footer {
-    background: rgba(0, 0, 0, 0.25);
-    height: 100px;
+    background: rgba(0, 0, 0, 0.10);
+    height: 120px;
     padding: 50px;
+    margin-top: 50px;
 }
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.scroll-to-top-button {
+    background-color: #6247aa;
+    color: #ffffff;
+    width: 80px;
+    height: 80px;
+    font-size: 2em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-top-button:hover {
+    background-color: #a594f9;
+    transform: scale(1.1);
+}
+
 
 @media (min-width: 768px) {
   .button {

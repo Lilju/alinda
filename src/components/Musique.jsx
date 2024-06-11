@@ -15,8 +15,8 @@ export const Musique = () => {
                 </div>
                 </div>
           <div className="linkcontainer">
-                <a href="https://music.imusician.pro/a/pGPXgQbf?fbclid=IwAR1lJySy1zMPERbubkF8Q9rlhnNsXWWHOId3TnFMxPlUiCADak19s3cgM4c" target="_blank">Ecouter l'album sur les plateformes de streaming</a>
-                <a href="https://alindamusic.bandcamp.com/album/linda" target="_blank">Ecouter l'album ou acheter le CD sur Bandcamp</a>
+                <a href="https://music.imusician.pro/a/pGPXgQbf?fbclid=IwAR1lJySy1zMPERbubkF8Q9rlhnNsXWWHOId3TnFMxPlUiCADak19s3cgM4c" target="_blank">Écouter l'album sur les plateformes de streaming</a>
+                <a href="https://alindamusic.bandcamp.com/album/linda" target="_blank">Acheter le CD ou écouter l'album sur Bandcamp</a>
             </div>
             </section>);
 };
